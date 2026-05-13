@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite the associated paper and this repository release."
+title: "Chinese 199 Cities EVCS Accessibility"
+authors:
+  - family-names: "Cui"
+    given-names: "Qinyu"
+repository-code: "https://github.com/cuiqinyu/Chinese-199-cities-EVCS-accessibility"
+version: "pre-release"
+date-released: "2026-05-13"
+license: "CC-BY-NC-4.0"
+keywords:
+  - "electric vehicle charging station"
+  - "EVCS"
+  - "accessibility"
+  - "2SFCA"
+  - "China"
+  - "urban data"
+abstract: "A multiscale EVCS accessibility dataset covering 199 Chinese cities, including 1 km grid, district, city, and province-scale accessibility products."
+

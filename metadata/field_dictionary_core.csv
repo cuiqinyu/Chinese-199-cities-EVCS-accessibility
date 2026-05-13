@@ -1,0 +1,12 @@
+field_name,scale_or_file,meaning,unit_or_type,notes
+grid_id,a_1000mGrid_g2sfca_core,Unique 1 km grid identifier,string,Generated from EPSG:6933 grid coordinates.
+city_name,c_city_2sfca_accessibility,Study city name,string,One of the 199 final study cities.
+sum_pop,all spatial products,Aggregated population,count,Derived from WorldPop 2022.
+sum_ev,all spatial products,Allocated EV demand,count,Allocated from city-level EV stock using population weights.
+p_ai15,c_city_2sfca_accessibility,Population-weighted 2SFCA accessibility at 1.5 km,kW per EV demand unit,Field name truncated for Shapefile.
+e_ai15,c_city_2sfca_accessibility,EV-weighted effective-capacity 2SFCA accessibility at 1.5 km,kW per 1000 EVs,Default capacity accessibility indicator.
+d1km,derived layers,Nearest ordinary EVCS road distance,km,Used as default distance indicator in DoubleIndex.
+EV_demand,base/intermediate products,Allocated EV demand,count,Used as 2SFCA demand and EV-weighting variable.
+popw_Ai_*,a_1000mGrid_g2sfca_core,Population-weighted 2SFCA accessibility fields,accessibility index,Threshold suffix indicates catchment distance.
+evw_AiEV*,a_1000mGrid_g2sfca_core,EV-weighted accessibility fields,kW per 1000 EVs,Threshold suffix indicates catchment distance.
+

@@ -1,0 +1,6 @@
+file_group,scale,format,crs,records,description
+a_1000mGrid_g2sfca_core,1 km grid,ESRI Shapefile,EPSG:6933,1860012,"Grid-scale population, EV demand, and weighted accessibility summaries."
+b_district_g2sfca_accessibility,district/county,ESRI Shapefile,EPSG:4326,1834,"District-scale EVCS accessibility summaries."
+c_city_2sfca_accessibility,city,ESRI Shapefile,EPSG:4326,199,"City-scale EVCS accessibility summaries for the 199 study cities."
+d_province_g2sfca,province,ESRI Shapefile,China Lambert Conformal Conic,23,"Province-scale study-area accessibility summaries."
+
