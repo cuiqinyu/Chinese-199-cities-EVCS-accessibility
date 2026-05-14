@@ -1,6 +1,12 @@
-file_group,scale,format,crs,records,description
-a_1000mGrid_g2sfca_core,1 km grid,ESRI Shapefile,EPSG:6933,1860012,"Grid-scale population, EV demand, and weighted accessibility summaries."
-b_district_g2sfca_accessibility,district/county,ESRI Shapefile,EPSG:4326,1834,"District-scale EVCS accessibility summaries."
-c_city_2sfca_accessibility,city,ESRI Shapefile,EPSG:4326,199,"City-scale EVCS accessibility summaries for the 199 study cities."
-d_province_g2sfca,province,ESRI Shapefile,China Lambert Conformal Conic,23,"Province-scale study-area accessibility summaries."
+group,data_record,path,format,spatial_scale,main_contents,status
+Travel distance for accessibility,TravelDistance\Nearest1to8EVCS\100m,data/TravelDistance/Nearest1to8EVCS/100m,CSV,100 m research units,"City-split fine-scale travel-distance records from each research unit to the nearest 1--8 ordinary EVCS and fast EVCS, in km.",to be populated
+Travel distance for accessibility,TravelDistance\Nearest1to8EVCS\Merge,data/TravelDistance/Nearest1to8EVCS/Merge,SHP,"Grid; county/district; city; province","National travel-distance maps and multiscale summaries merged or aggregated from the 100 m city CSV records.",to be populated
+2SFCA for accessibility,2SFCA\1to8km\100m,data/2SFCA/1to8km/100m,CSV,100 m research units,"City-split fine-scale 2SFCA accessibility records for 1, 1.5, and 2--8 km thresholds, including aggressive and conservative charging-power assumptions.",to be populated
+2SFCA for accessibility,2SFCA\1to8km\Merge,data/2SFCA/1to8km/Merge,SHP,"Grid; county/district; city; province","National 2SFCA accessibility maps and multiscale summaries under the conservative charging-power scenario.",to be populated
+Derivatives,Derivatives\DoubleIndex_Accessibility_Map,data/Derivatives/DoubleIndex_Accessibility_Map,SHP,City,"Combined travel-distance and 2SFCA accessibility classification for identifying different types of accessibility deficits.",to be populated
+Derivatives,Derivatives\Accessibility_Gini_Map,data/Derivatives/Accessibility_Gini_Map,SHP,City,"Within-city inequality indicators for 2SFCA accessibility.",to be populated
+Technical validation,Validation\EVCS_Dataset,data/Validation/EVCS_Dataset,CSV,City and county/district,"Aggregate-scale validation of the Star Charge EVCS data against independent Amap EVCS records.",to be populated
+Technical validation,Validation\DoubleMethods_TravelDistance,data/Validation/DoubleMethods_TravelDistance,CSV,OD samples,"Comparison records between OSM road distances and map API route distances.",to be populated
+Technical validation,Validation\DifferentNearestEVCS_TravelDistance,data/Validation/DifferentNearestEVCS_TravelDistance,CSV,City,"Consistency checks for nearest 1--8 EVCS travel-distance indicators.",to be populated
+Technical validation,Validation\DifferentDistanceThreshold_2SFCA,data/Validation/DifferentDistanceThreshold_2SFCA,CSV,City,"Consistency checks for city-level 2SFCA accessibility under 1, 1.5, and 2--8 km thresholds.",to be populated
 

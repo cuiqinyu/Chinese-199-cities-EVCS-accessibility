@@ -16,11 +16,22 @@ Planned release URL:
 
 ```text
 data/
-  2SFCA_1to8km_EVCS_Conservative_Map/
-    a_1000mGrid_g2sfca_core.*
-    b_district_g2sfca_accessibility.*
-    c_city_2sfca_accessibility.*
-    d_province_g2sfca.*
+  TravelDistance/
+    Nearest1to8EVCS/
+      100m/
+      Merge/
+  2SFCA/
+    1to8km/
+      100m/
+      Merge/
+  Derivatives/
+    DoubleIndex_Accessibility_Map/
+    Accessibility_Gini_Map/
+  Validation/
+    EVCS_Dataset/
+    DoubleMethods_TravelDistance/
+    DifferentNearestEVCS_TravelDistance/
+    DifferentDistanceThreshold_2SFCA/
 code/
   README.md
 metadata/
@@ -33,16 +44,20 @@ README.md
 
 ## Core Data Products
 
-The first public release is expected to include processed accessibility products rather than all restricted raw inputs.
+The first public release is expected to include processed accessibility products rather than all restricted raw inputs. The data records follow the current manuscript overview table.
 
-| File group | Spatial scale | CRS | Records | Description |
-| --- | --- | --- | ---: | --- |
-| `a_1000mGrid_g2sfca_core.*` | 1 km grid | EPSG:6933 | 1,860,012 | Population, EV demand, and weighted 2SFCA accessibility summaries. |
-| `b_district_g2sfca_accessibility.*` | District/county | EPSG:4326 | 1,834 | District-scale accessibility summaries. |
-| `c_city_2sfca_accessibility.*` | City | EPSG:4326 | 199 | City-scale accessibility summaries for the 199 study cities. |
-| `d_province_g2sfca.*` | Province | China Lambert Conformal Conic | 23 | Province-scale accessibility summaries for study-area portions. |
-
-Additional CSV and GeoTIFF versions may be added in later releases when they are generated from the same source tables and identifiers.
+| Group | Data record | Format | Spatial scale | Main contents |
+| --- | --- | --- | --- | --- |
+| Travel distance for accessibility | `data/TravelDistance/Nearest1to8EVCS/100m/` | CSV | 100 m research units | City-split fine-scale travel-distance records from each research unit to the nearest 1--8 ordinary EVCS and fast EVCS, in km. |
+| Travel distance for accessibility | `data/TravelDistance/Nearest1to8EVCS/Merge/` | SHP | Grid, county/district, city, province | National travel-distance maps and multiscale summaries merged or aggregated from the 100 m city CSV records. |
+| 2SFCA for accessibility | `data/2SFCA/1to8km/100m/` | CSV | 100 m research units | City-split fine-scale 2SFCA accessibility records for 1, 1.5, and 2--8 km distance thresholds, including aggressive and conservative charging-power assumptions. |
+| 2SFCA for accessibility | `data/2SFCA/1to8km/Merge/` | SHP | Grid, county/district, city, province | National 2SFCA accessibility maps and multiscale summaries under the conservative charging-power scenario. |
+| Derivatives | `data/Derivatives/DoubleIndex_Accessibility_Map/` | SHP | City | Combined travel-distance and 2SFCA accessibility classification for identifying different types of accessibility deficits. |
+| Derivatives | `data/Derivatives/Accessibility_Gini_Map/` | SHP | City | Within-city inequality indicators for 2SFCA accessibility. |
+| Technical validation | `data/Validation/EVCS_Dataset/` | CSV | City and county/district | Aggregate-scale validation of the Star Charge EVCS data against independent Amap EVCS records. |
+| Technical validation | `data/Validation/DoubleMethods_TravelDistance/` | CSV | OD samples | Comparison records between OSM road distances and map API route distances. |
+| Technical validation | `data/Validation/DifferentNearestEVCS_TravelDistance/` | CSV | City | Consistency checks for nearest 1--8 EVCS travel-distance indicators. |
+| Technical validation | `data/Validation/DifferentDistanceThreshold_2SFCA/` | CSV | City | Consistency checks for city-level 2SFCA accessibility under 1, 1.5, and 2--8 km thresholds. |
 
 ## Restricted Inputs
 

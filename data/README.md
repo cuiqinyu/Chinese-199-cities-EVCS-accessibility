@@ -2,21 +2,31 @@
 
 Place public processed data products here.
 
-Recommended first-release structure:
+Recommended first-release structure, matching the current manuscript data-record table:
 
 ```text
 data/
-  2SFCA_1to8km_EVCS_Conservative_Map/
-    a_1000mGrid_g2sfca_core.shp
-    a_1000mGrid_g2sfca_core.dbf
-    a_1000mGrid_g2sfca_core.shx
-    a_1000mGrid_g2sfca_core.prj
-    b_district_g2sfca_accessibility.*
-    c_city_2sfca_accessibility.*
-    d_province_g2sfca.*
+  TravelDistance/
+    Nearest1to8EVCS/
+      100m/     # city-split CSV files
+      Merge/    # merged or aggregated SHP products
+  2SFCA/
+    1to8km/
+      100m/     # city-split CSV files
+      Merge/    # merged or aggregated SHP products
+  Derivatives/
+    DoubleIndex_Accessibility_Map/
+    Accessibility_Gini_Map/
+  Validation/
+    EVCS_Dataset/
+    DoubleMethods_TravelDistance/
+    DifferentNearestEVCS_TravelDistance/
+    DifferentDistanceThreshold_2SFCA/
 ```
 
-Large files may be uploaded through GitHub Releases or Git LFS if needed.
+Use the folder names exactly as listed above so that the repository structure remains consistent with the manuscript and `metadata/dataset_manifest.csv`.
+
+Large files may be uploaded through GitHub Releases or Git LFS if needed. If files are released outside the git history, keep a small README or manifest entry in the corresponding folder that records the release asset name, checksum, and version.
 
 Raw third-party EVCS platform records, map API responses, and API keys should not be committed.
 
