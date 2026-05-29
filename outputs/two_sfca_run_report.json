@@ -1,0 +1,28 @@
+{
+  "demo": "single-city EVCS accessibility demo",
+  "sample_city": {
+    "city_name": "深圳市",
+    "city_en": "Shenzhen"
+  },
+  "research_units": 165581,
+  "evcs_points": 1512,
+  "road_nodes": 46155,
+  "road_edges": 95747,
+  "graph_crs": "EPSG:32650",
+  "osmnx_created_date": "2026-04-22 17:57:23",
+  "osmnx_created_with": "OSMnx 1.8.1",
+  "inputs": {
+    "population_ev_demand_gpkg": "data/sample_city_population_ev_demand.gpkg",
+    "evcs_fixed_power_shp": "data/sample_city_evcs_fixed_power_7_60.shp",
+    "road_graphml": "data/sample_city_osm_drive.graphml"
+  },
+  "outputs": {
+    "two_sfca": {
+      "path": "outputs/single_city_2sfca_1to8km_distance_threshold.csv",
+      "sha256": "d51580fc8333d1bee865e4fb991bedd6e5f234f26da21156ba12fc2619a468b7",
+      "rows": 165581
+    }
+  },
+  "task": "Gaussian 2SFCA accessibility",
+  "runtime_seconds": 92.441
+}
