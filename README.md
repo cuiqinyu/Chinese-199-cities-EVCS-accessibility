@@ -5,6 +5,7 @@ This folder is a runnable single-city calculation demo for the Chinese 199 citie
 - `data/sample_city_population_ev_demand.gpkg`: 100 m research units with population and allocated EV demand.
 - `data/sample_city_evcs_fixed_power_7_60.*`: EVCS point layer for the sample city. The effective-capacity field is `FixPwr_kW = 60 * fast_piles + 7 * slow_piles`.
 - `data/sample_city_osm_drive.graphml`: the OSM drive-network graph used for road-distance routing.
+- `data/city_ev_stock_2022_199_cities.csv`: 2022 EV stock for the 199 study cities, keyed by unique English city names.
 
 The `outputs/` folder contains the already computed demo results. Running the script regenerates these files.
 
@@ -16,6 +17,7 @@ single_city_accessibility_demo/
 |-- compute_travel_distance_accessibility.py
 |-- compute_2sfca_accessibility.py
 |-- data/
+|   |-- city_ev_stock_2022_199_cities.csv
 |   |-- sample_city_population_ev_demand.gpkg
 |   |-- sample_city_evcs_fixed_power_7_60.cpg
 |   |-- sample_city_evcs_fixed_power_7_60.dbf
