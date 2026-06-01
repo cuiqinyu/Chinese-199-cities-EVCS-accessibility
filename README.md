@@ -11,6 +11,9 @@ The `outputs/` folder contains the already computed demo results. Running the sc
 
 In the 199-city summary table, `population_2022` is the summed population of the city-level 100 m demand units, `ev_stock_2022` is the 2022 city EV stock, and `ev_stock_per_100_people` is calculated as `ev_stock_2022 / population_2022 * 100`.
 
+ps：For peer review, the dataset is available through the following private Zenodo preview link:
+[https://zenodo.org/records/20430212?preview=1&token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc3OTk4NTI3MSwiZXhwIjoxNzk4NTg4Nzk5fQ.eyJpZCI6Ijk0Yzg0Yjc2LWQ4OTMtNGMxMC05ZjU0LTJhMjBkMTMwYTBkMCIsImRhdGEiOnt9LCJyYW5kb20iOiJjMDJiOTJiMTU3MzA5MTgyOTQ0NWM5YmUzYTZjZTJjZiJ9.rPgbfyKvpSZ0r_kZk9fwY746TuXGwVqCysXTb6h0Ykc9kI_kQU3tnM1W3qgQUHFece-9srun35b48OENaNfk_A]
+
 ## Folder Structure
 
 ```text
